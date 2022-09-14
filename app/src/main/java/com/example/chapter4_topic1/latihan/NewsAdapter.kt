@@ -41,7 +41,7 @@ class NewsAdapter(var daftarBerita : ArrayList<DataNews>) : RecyclerView.Adapter
         return daftarBerita.size
     }
 
-    fun setDataBerita(daftarBerita: ArrayList<DataNews>){
+    fun setDataNews(daftarBerita: ArrayList<DataNews>){
         this.daftarBerita = daftarBerita
 
     }

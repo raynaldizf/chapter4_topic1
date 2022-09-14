@@ -16,12 +16,12 @@ class NewsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_news)
-        dataBerita()
+        dataNews()
         vmNews = ViewModelProvider(this).get(NewsViewModel::class.java)
 
-        vmNews.getBerita()
+        vmNews.getNews()
         vmNews.listberita.observe(this,{
-            newsAdapter.setDataBerita(it as ArrayList<DataNews>)
+            newsAdapter.setDataNews(it as ArrayList<DataNews>)
         })
 
 
@@ -32,7 +32,7 @@ class NewsActivity : AppCompatActivity() {
         }
     }
 
-    fun dataBerita(){
+    fun dataNews(){
         rvNews = findViewById(R.id.rvNews)
         newsAdapter = NewsAdapter(ArrayList())
 

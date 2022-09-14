@@ -38,7 +38,7 @@ class NewsViewModel : ViewModel() {
     )
     val listberita : MutableLiveData<List<DataNews>> = MutableLiveData()
 
-    fun getBerita(){
+    fun getNews(){
         var berita = listBerita
         listberita.value = berita
     }
